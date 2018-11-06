@@ -1,5 +1,5 @@
 {
-    "name": "upwork/php-upwork",
+    "name": "upwork/php-upwork-oauth2",
     "description": "PHP bindings for Upwork API (OAuth2)",
     "version": "v2.0.0",
     "type": "library",
@@ -17,9 +17,9 @@
     ],
     "support": {
         "email": "apisupport@upwork.com",
-        "issues": "https://github.com/upwork/php-upwork/issues",
+        "issues": "https://github.com/upwork/php-upwork-oauth2/issues",
         "forum": "https://community.upwork.com/t5/API-Questions-Answers/bd-p/api_support",
-        "source": "https://github.com/upwork/php-upwork/releases",
+        "source": "https://github.com/upwork/php-upwork-oauth2/releases",
         "wiki": "http://developers.upwork.com"
     },
     "require": {
