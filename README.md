@@ -1,11 +1,11 @@
 PHP bindings for Upwork API (OAuth2)
 ============
 
-[![License](http://img.shields.io/packagist/l/upwork/php-upwork.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
-[![Latest Stable Version](https://poser.pugx.org/upwork/php-upwork/v/stable.svg)](https://github.com/upwork/php-upwork/releases)
-[![Package version](http://img.shields.io/packagist/v/upwork/php-upwork.svg)](https://packagist.org/packages/upwork/php-upwork)
-[![Build status](https://travis-ci.org/upwork/php-upwork.svg)](http://travis-ci.org/upwork/php-upwork)
-[![Monthly downloads](http://img.shields.io/packagist/dm/upwork/php-upwork.svg)](https://packagist.org/packages/upwork/php-upwork)
+[![License](http://img.shields.io/packagist/l/upwork/php-upwork-oauth2.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
+[![Latest Stable Version](https://poser.pugx.org/upwork/php-upwork-oauth2/v/stable.svg)](https://github.com/upwork/php-upwork-oauth2/releases)
+[![Package version](http://img.shields.io/packagist/v/upwork/php-upwork-oauth2.svg)](https://packagist.org/packages/upwork/php-upwork-oauth2)
+[![Build status](https://travis-ci.org/upwork/php-upwork-oauth2.svg)](http://travis-ci.org/upwork/php-upwork-oauth2)
+[![Monthly downloads](http://img.shields.io/packagist/dm/upwork/php-upwork-oauth2.svg)](https://packagist.org/packages/upwork/php-upwork-oauth2)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/5e7c00ac-ac19-4b77-92ab-e8888a60028e/mini.png)](https://insight.sensiolabs.com/projects/5e7c00ac-ac19-4b77-92ab-e8888a60028e)
 
 # Introduction
@@ -33,7 +33,7 @@ These are the supported API resources:
 
 Copyright 2018 Upwork Corporation. All Rights Reserved.
 
-php-upwork is licensed under the Apache License, Version 2.0 (the "License");
+php-upwork-oauth2 is licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
@@ -71,18 +71,18 @@ Below is a simple example of the `composer.json` file you can use:
     {
         "name": "upwork/my-oauth2-app",
         "require": {
-            "upwork/php-upwork": "dev-master"
+            "upwork/php-upwork-oauth2": "dev-master"
         }
     }
 
 ## Installation using Composer
 1.
-Add `upwork/php-upwork` to your `composer.json`, simple example:
+Add `upwork/php-upwork-oauth2` to your `composer.json`, simple example:
 ```
 {
     "name": "my/my-oauth-app",
     "require": {
-        "upwork/php-upwork": "v2.0.0" // note: the latest release is recommended
+        "upwork/php-upwork-oauth2": "v2.0.0" // note: the latest release is recommended
     }
 }
 ```
@@ -94,7 +94,7 @@ the output should look similar to
 ```
 Loading composer repositories with package information
 Updating dependencies (including require-dev)
-  - Installing upwork/php-upwork (v2.0.0)
+  - Installing upwork/php-upwork-oauth2 (v2.0.0)
     Downloading: 100%         
 
 Writing lock file
@@ -105,9 +105,9 @@ Generating autoload files
 IMPORTANT:
 The library supports different OAuth2 clients, by default it uses `thephpleague/oauth2-client`. 
 In case you don't want to use it, or you don't have the possibility to install it, you can create 
-your own wrapper (check `vendor/upwork/php-upwork/src/Upwork/API/AuthTypes/` to see how it works).
+your own wrapper (check `vendor/upwork/php-upwork-oauth2/src/Upwork/API/AuthTypes/` to see how it works).
 
-copy `vendor/upwork/php-upwork/example/example.php` to the `myapp.php` if you have
+copy `vendor/upwork/php-upwork-oauth2/example/example.php` to the `myapp.php` if you have
 
 *NOTE: if you use your own wrapper, update 'authType' property in the configuration section of
 `myapp.php` and specify the name of your handler.*
