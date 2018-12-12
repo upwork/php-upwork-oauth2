@@ -19,6 +19,9 @@ use Upwork\API\Utils as ApiUtils;
 use Upwork\API\ApiException as ApiException;
 use Upwork\API\AuthTypes\AbstractOAuth as AbstractOAuth;
 
+use Psr\Http\Message\RequestInterface;
+use GuzzleHttp\Middleware;
+
 /**
  * OAuth 2.0 Client based on league/oauth2-client Library, as an example
  * see https://github.com/thephpleague/oauth2-client
@@ -72,6 +75,7 @@ final class OAuth2ClientLib extends AbstractOAuth implements ApiClient
 		throw new ApiException('Unsupported HTTP method.');
 	}
 
+	$options['headers']['user-agent'] = ApiConfig::UPWORK_LIBRARY_USER_AGENT;
 	$request = $this->getInstance()->getAuthenticatedRequest($type, $url, self::$_accessToken, $options);
 	
 	ApiDebug::p('prepared request', $request);
@@ -132,7 +136,7 @@ final class OAuth2ClientLib extends AbstractOAuth implements ApiClient
             'clientId' => self::$_clientId, 
             'clientSecret' => self::$_clientSecret,
             'redirectUri' => self::$_redirectUri,
-            'urlAuthorize' => ApiUtils::getFullUrl(self::URL_AUTH, 'api'),
+            'urlAuthorize' => ApiUtils::getFullUrl(self::URL_AUTH, ''),
 	    'urlAccessToken' => ApiUtils::getFullUrl(self::URL_ATOKEN, 'api'),
 	    'urlResourceOwnerDetails' => ''
         );
@@ -156,6 +160,10 @@ final class OAuth2ClientLib extends AbstractOAuth implements ApiClient
 
         $accessTokenInfo = array();
 
+	$accessToken = $this->getInstance()->getHttpClient()->getConfig()['handler']->push(
+            Middleware::mapRequest(function (RequestInterface $request) {
+                return $request->withHeader('User-Agent', ApiConfig::UPWORK_LIBRARY_USER_AGENT);
+            }));
         $accessToken = $this->getInstance()->getAccessToken($type, $options);
 
         $accessTokenInfo['access_token']  = $accessToken->getToken();
