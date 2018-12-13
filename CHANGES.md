@@ -1,5 +1,8 @@
 # Release History
 
+## 2.0.1
+* Set library User-Agent
+
 ## 2.0.0
 * OAuth2 release
 
