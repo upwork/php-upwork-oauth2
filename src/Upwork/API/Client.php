@@ -16,8 +16,6 @@ use Upwork\API\Config as ApiConfig;
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Utils as ApiUtils;
 
-require dirname(__DIR__) . '/../../vendor/autoload.php';
-
 /**
  * Client
  */

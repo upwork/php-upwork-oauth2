@@ -65,6 +65,11 @@ final class Config
     static private $_debug = false;
 
     /**
+     * User-Agent
+     */
+    const UPWORK_LIBRARY_USER_AGENT = 'Github Upwork API PHP Client';
+
+    /**
      * Constructor
      *
      * @param   array $data Array of parameters
