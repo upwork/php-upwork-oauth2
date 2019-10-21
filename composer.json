@@ -1,7 +1,7 @@
 {
     "name": "upwork/php-upwork-oauth2",
     "description": "PHP bindings for Upwork API (OAuth2)",
-    "version": "v2.0.1",
+    "version": "v2.1.0",
     "type": "library",
     "keywords": ["upwork", "php", "api", "oauth2"],
     "homepage": "http://www.upwork.com",
