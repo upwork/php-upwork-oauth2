@@ -43,6 +43,24 @@ final class Workdiary extends ApiClient
     }
 
     /**
+     * Get Workdiary
+     *
+     * @param   string $company Company ID
+     * @param   string $date Date
+     * @param   array $params (Optional) Parameters
+     * @return  object
+     */
+    public function get($company, $date, $params = array())
+    {
+        ApiDebug::p(__FUNCTION__);
+
+        $response = $this->_client->get('/team/v3/workdiaries/companies/' . $company . '/' . $date, $params);
+        ApiDebug::p('found response info', $response);
+
+        return $response;
+    }
+
+    /**
      * Get Workdiary by Contract
      *
      * @param   string $contract Contract ID
@@ -54,7 +72,7 @@ final class Workdiary extends ApiClient
     {
         ApiDebug::p(__FUNCTION__);
 
-        $response = $this->_client->get('/team/v2/workdiaries/contracts/' . $contract . '/' . $date, $params);
+        $response = $this->_client->get('/team/v3/workdiaries/contracts/' . $contract . '/' . $date, $params);
         ApiDebug::p('found response info', $response);
 
         return $response;

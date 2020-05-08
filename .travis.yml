@@ -1,7 +1,6 @@
 language: php
 
 php:
-  - "7.3"
   - "7.1"
   - hhvm
 
@@ -11,6 +10,7 @@ before_script:
 matrix:
   allow_failures:
     - php: hhvm
+    - php: "7.3"
     - php: "7.2"
   fast_finish: true
 
