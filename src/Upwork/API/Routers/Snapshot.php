@@ -53,7 +53,7 @@ final class Snapshot extends ApiClient
     {
         ApiDebug::p(__FUNCTION__);
 
-        $response = $this->_client->get('/team/v2/snapshots/contracts/' . $contractId . '/' . $ts);
+        $response = $this->_client->get('/team/v3/snapshots/contracts/' . $contractId . '/' . $ts);
         ApiDebug::p('found response info', $response);
 
         return $response;
@@ -71,7 +71,7 @@ final class Snapshot extends ApiClient
     {
         ApiDebug::p(__FUNCTION__);
 
-        $response = $this->_client->put('/team/v2/snapshots/contracts/' . $contractId . '/' . $ts, $params);
+        $response = $this->_client->put('/team/v3/snapshots/contracts/' . $contractId . '/' . $ts, $params);
         ApiDebug::p('found response info', $response);
 
         return $response;
@@ -88,7 +88,7 @@ final class Snapshot extends ApiClient
     {
         ApiDebug::p(__FUNCTION__);
 
-        $response = $this->_client->delete('/team/v2/snapshots/contracts/' . $contractId . '/' . $ts);
+        $response = $this->_client->delete('/team/v3/snapshots/contracts/' . $contractId . '/' . $ts);
         ApiDebug::p('found response info', $response);
 
         return $response;
