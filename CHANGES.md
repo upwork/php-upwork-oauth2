@@ -1,5 +1,13 @@
 # Release History
 
+## 2.2.0
+* Send Message to a Batch of Rooms API
+* Milestones::delete was replaced with Milestones::deleteMilestone (breaking!)
+* Fixed Workdays API
+* Stop supporting deprecated Teamrooms API
+* Migrate tests
+* Bug fixes
+
 ## 2.1.1
 * Add Room Messages API
 * Sync-up routers with OAuth1 version
