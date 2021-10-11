@@ -4,9 +4,8 @@ PHP bindings for Upwork API (OAuth2)
 [![License](http://img.shields.io/packagist/l/upwork/php-upwork-oauth2.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![Latest Stable Version](https://poser.pugx.org/upwork/php-upwork-oauth2/v/stable.svg)](https://github.com/upwork/php-upwork-oauth2/releases)
 [![Package version](http://img.shields.io/packagist/v/upwork/php-upwork-oauth2.svg)](https://packagist.org/packages/upwork/php-upwork-oauth2)
-[![Build status](https://travis-ci.org/upwork/php-upwork-oauth2.svg)](http://travis-ci.org/upwork/php-upwork-oauth2)
+[![Build status](https://github.com/upwork/php-upwork-oauth2/workflows/build/badge.svg)](https://github.com/upwork/php-upwork-oauth2/actions)
 [![Monthly downloads](http://img.shields.io/packagist/dm/upwork/php-upwork-oauth2.svg)](https://packagist.org/packages/upwork/php-upwork-oauth2)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/5e7c00ac-ac19-4b77-92ab-e8888a60028e/mini.png)](https://insight.sensiolabs.com/projects/5e7c00ac-ac19-4b77-92ab-e8888a60028e)
 
 # Introduction
 This project provides a set of resources of Upwork API from http://developers.upwork.com
