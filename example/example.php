@@ -32,6 +32,7 @@ $config = new \Upwork\API\Config(
 );
 
 $client = new \Upwork\API\Client($config);
+//$client::setOrgUidHeader('1234567890'); // Organization UID (optional)
 
 // $accessTokenInfo has the following structure
 // array('access_token' => ..., 'refresh_token' => ..., 'expires_in' => ...);
@@ -54,3 +55,19 @@ $accessTokenInfo = $client->auth();
 $auth = new \Upwork\API\Routers\Auth($client);
 $info = $auth->getUserInfo();
 print_r($info);
+
+/*$graphql = new \Upwork\API\Routers\Graphql($client);
+$params['query'] = <<<QUERY
+query {
+  user {
+    id
+    nid
+    rid
+  }
+  organization {
+    id
+  }
+}
+QUERY;
+$data = $graphql->execute($params);
+print_r($data);*/

@@ -52,18 +52,25 @@ final class OAuth2ClientLib extends AbstractOAuth implements ApiClient
      * @param   string $type Type of request
      * @param   string $url URL
      * @param   array $params (Optional) Parameters
+     * @param   string $tenantId (Optional) Organization UID
      * @access  public
      * @return  mixed
      * @throw	ApiException Invalid method requested
      */
-    public function request($type, $url, $params = array())
+    public function request($type, $url, $params = array(), string $tenantId = null)
     {
 	ApiDebug::p('running request from ' . __CLASS__);
 
 	switch ($type) {
 	    case \League\OAuth2\Client\Provider\AbstractProvider::METHOD_POST:
-	        $options = array('headers' => array('content-type' => 'application/x-www-form-urlencoded'));
-	        $options['body'] = http_build_query($params, null, '&', \PHP_QUERY_RFC3986);
+                if (self::$_epoint == UPWORK_GRAPHQL_EP_NAME) {
+	            $options = array('headers' => array('content-type' => 'application/json'));
+                    is_null($tenantId) || $options['headers']['X-Upwork-API-TenantId'] = $tenantId;
+		    $options['body'] = $params;
+                } else {
+	            $options = array('headers' => array('content-type' => 'application/x-www-form-urlencoded'));
+		    $options['body'] = http_build_query($params, null, '&', \PHP_QUERY_RFC3986);
+                }
 
 		$url = ApiUtils::getFullUrl($url, self::$_epoint);
 		break;
@@ -84,6 +91,9 @@ final class OAuth2ClientLib extends AbstractOAuth implements ApiClient
 	    // do not use getParsedResponse, it returns an array
 	    // but we need a raw json that will be decoded and returned as StdClass object
 	    $response = $this->getInstance()->getResponse($request);
+        } catch (\GuzzleHttp\Exception\ClientException $e) {
+            $eResponse = $e->getResponse();
+            $response = $eResponse->getBody()->getContents();
 	} catch (\Exception $e) {
 	    $response = $e->getResponseBody();
 	}
