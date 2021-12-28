@@ -12,6 +12,8 @@
 
 define('UPWORK_API_EP_NAME', 'api');
 define('UPWORK_GDS_EP_NAME', 'gds');
+define('UPWORK_GRAPHQL_EP_NAME', 'graphql');
 define('UPWORK_BASE_URL', 'https://www.upwork.com');
 define('UPWORK_BASE_URL_API', UPWORK_BASE_URL . '/' . UPWORK_API_EP_NAME);
 define('UPWORK_BASE_URL_GDS', UPWORK_BASE_URL . '/' . UPWORK_GDS_EP_NAME);
+define('UPWORK_BASE_URL_GRAPHQL', 'https://api.upwork.com/graphql');

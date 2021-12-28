@@ -1,5 +1,8 @@
 # Release History
 
+## 2.3.0
+* Add GraphQL support
+
 ## 2.2.0
 * Send Message to a Batch of Rooms API
 * Milestones::delete was replaced with Milestones::deleteMilestone (breaking!)

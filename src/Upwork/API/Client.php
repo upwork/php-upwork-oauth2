@@ -31,6 +31,11 @@ class Client
     static protected $_epoint = UPWORK_API_EP_NAME;
 
     /**
+     * @var Organization UID
+     */
+    static protected $_tenantId = null;
+
+    /**
      * @var Server instance (AuthTypes)
      */
     protected $_server;
@@ -113,6 +118,17 @@ class Client
     }
 
     /**
+     * Configure X-Upwork-API-TenantId header
+     *
+     * @param	string	$tenantId (Optional) Organization UID
+     * @return	void
+     */
+    public static function setOrgUidHeader(string $tenantId)
+    {
+        self::$_tenantId = $tenantId;
+    }
+
+    /**
      * Run API request
      *
      * @param   string $type Type of request, i.e. method
@@ -140,7 +156,9 @@ class Client
                 break;
         }
 
-        if (self::$_epoint == UPWORK_API_EP_NAME) {
+	if (self::$_epoint == UPWORK_GRAPHQL_EP_NAME) {
+            $params = json_encode($params);
+	} elseif (self::$_epoint == UPWORK_API_EP_NAME) {
             $url = $url . '.' . self::DATA_FORMAT;
         } elseif (self::$_epoint == UPWORK_GDS_EP_NAME) {
             $params['tqx'] = 'out:' . self::DATA_FORMAT;
@@ -148,7 +166,7 @@ class Client
 
         $this->_server->option('epoint', self::$_epoint);
 
-        $response = $this->_server->request($method, $url, $params);
+        $response = $this->_server->request($method, $url, $params, self::$_tenantId);
 
 	return json_decode($response);
     }

@@ -37,7 +37,7 @@ final class Utils
             ? 'UPWORK_BASE_URL_' . strtoupper($ep)
             : 'UPWORK_BASE_URL';
 
-	$queryData = is_array($params) ? $queryData = '?' . http_build_query($params) : '';
+	$queryData = (is_array($params) && $ep != UPWORK_GRAPHQL_EP_NAME) ? $queryData = '?' . http_build_query($params) : '';
         $fullUrl = constant($name) . $url . $queryData;
         ApiDebug::p('url', $fullUrl);
 
