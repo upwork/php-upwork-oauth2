@@ -1,17 +1,17 @@
 {
     "name": "upwork/php-upwork-oauth2",
     "description": "PHP bindings for Upwork API (OAuth2)",
-    "version": "v2.3.0",
+    "version": "v2.3.1",
     "type": "library",
     "keywords": ["upwork", "php", "api", "oauth2"],
     "homepage": "http://www.upwork.com",
-    "time": "2021-12-28",
+    "time": "2021-05-16",
     "license": "Apache-2.0",
     "authors": [
         {
             "name": "Maksym Novozhylov",
             "email": "mnovozhilov@upwork.com",
-            "homepage": "http://mnov.tel",
+            "homepage": "https://github.com/mnovozhylov",
             "role": "Product Architect, Platform/Integrity"
         }
     ],
