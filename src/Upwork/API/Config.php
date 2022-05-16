@@ -46,7 +46,7 @@ final class Config
     /**
      * @var Authorization code from authorization screen
      */
-    static private $_code;
+    static private $_authzCode;
     /**
      * @var Application mode, i.e. web or nonweb
      */
