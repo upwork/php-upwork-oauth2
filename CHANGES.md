@@ -1,5 +1,8 @@
 # Release History
 
+## 2.3.1
+* Bug fixes
+
 ## 2.3.0
 * Add GraphQL support
 
