@@ -1,1 +1,1 @@
-apigen generate -s src/ -d docs_html
+apigen src --output docs
