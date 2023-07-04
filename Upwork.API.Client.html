@@ -1,0 +1,907 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>Class Upwork\API\Client | PHP bindings for Upwork API (OAuth2) API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Upwork.html">Upwork</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Upwork.API.html">API</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Upwork.API.AuthTypes.html">AuthTypes</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Upwork.API.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Upwork.API.Routers.html">Routers</a>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li class="active">
+						<a href="Upwork.API.Client.html">
+							Client
+						</a>
+					</li>
+					<li>
+						<a href="Upwork.API.Config.html">
+							Config
+						</a>
+					</li>
+					<li>
+						<a href="Upwork.API.Debug.html">
+							Debug
+						</a>
+					</li>
+					<li>
+						<a href="Upwork.API.Utils.html">
+							Utils
+						</a>
+					</li>
+			</ul>
+		</div>
+		<div class="menu-section">
+			<h3>Exceptions</h3>
+			<ul>
+					<li>
+						<a href="Upwork.API.ApiException.html">
+							ApiException
+						</a>
+					</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Upwork.API.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Upwork.API.Client.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Upwork.html">Upwork</a>\<a href="namespace-Upwork.API.html">API</a>\<a href="Upwork.API.Client.html">Client</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+
+	</table>
+		<div class="classLikeDescription">
+	<div class="description"><p>Client</p>
+</div>
+		</div>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Upwork\API\Client</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Upwork.API.Routers.Auth.html"><span>Upwork\API\Routers\Auth</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Graphql.html"><span>Upwork\API\Routers\Graphql</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Jobs.Profile.html"><span>Upwork\API\Routers\Jobs\Profile</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Freelancers.Profile.html"><span>Upwork\API\Routers\Freelancers\Profile</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Organization.Teams.html"><span>Upwork\API\Routers\Organization\Teams</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Workdays.html"><span>Upwork\API\Routers\Workdays</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Jobs.Search.html"><span>Upwork\API\Routers\Jobs\Search</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Reports.Finance.Earnings.html"><span>Upwork\API\Routers\Reports\Finance\Earnings</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Snapshot.html"><span>Upwork\API\Routers\Snapshot</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Messages.html"><span>Upwork\API\Routers\Messages</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Activities.Team.html"><span>Upwork\API\Routers\Activities\Team</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Hr.Engagements.html"><span>Upwork\API\Routers\Hr\Engagements</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Activities.Engagement.html"><span>Upwork\API\Routers\Activities\Engagement</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Workdiary.html"><span>Upwork\API\Routers\Workdiary</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Organization.Companies.html"><span>Upwork\API\Routers\Organization\Companies</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Freelancers.Search.html"><span>Upwork\API\Routers\Freelancers\Search</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Organization.Users.html"><span>Upwork\API\Routers\Organization\Users</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Metadata.html"><span>Upwork\API\Routers\Metadata</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Hr.Freelancers.Offers.html"><span>Upwork\API\Routers\Hr\Freelancers\Offers</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Hr.Interviews.html"><span>Upwork\API\Routers\Hr\Interviews</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Payments.html"><span>Upwork\API\Routers\Payments</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Hr.Roles.html"><span>Upwork\API\Routers\Hr\Roles</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Reports.Finance.Accounts.html"><span>Upwork\API\Routers\Reports\Finance\Accounts</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Hr.Freelancers.Applications.html"><span>Upwork\API\Routers\Hr\Freelancers\Applications</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Hr.Clients.Applications.html"><span>Upwork\API\Routers\Hr\Clients\Applications</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Hr.Clients.Offers.html"><span>Upwork\API\Routers\Hr\Clients\Offers</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Reports.Finance.Billings.html"><span>Upwork\API\Routers\Reports\Finance\Billings</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Reports.Time.html"><span>Upwork\API\Routers\Reports\Time</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Hr.Submissions.html"><span>Upwork\API\Routers\Hr\Submissions</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Hr.Contracts.html"><span>Upwork\API\Routers\Hr\Contracts</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Hr.Milestones.html"><span>Upwork\API\Routers\Hr\Milestones</span></a>
+
+
+	</li>
+	<li>
+<a href="Upwork.API.Routers.Hr.Jobs.html"><span>Upwork\API\Routers\Hr\Jobs</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Upwork.API.Client.html#22" title="Go to source code">Upwork/API/Client.php</a><br>
+		</div>
+
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.Client.html#43-72" title="Go to source code">__construct</a>(<span><a href="Upwork.API.Config.html"><span title="Upwork\API\Config">Config</span></a> <var>$config</var></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Constructor
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Constructor</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$config</var>&nbsp;&nbsp;</td>
+										<td><p>Config object</p>
+</td>
+									</tr>
+							</table>
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Upwork.API.Routers.Auth.html#___construct">						<code>Upwork\API\Routers\Auth::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Graphql.html#___construct">						<code>Upwork\API\Routers\Graphql::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Jobs.Profile.html#___construct">						<code>Upwork\API\Routers\Jobs\Profile::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Freelancers.Profile.html#___construct">						<code>Upwork\API\Routers\Freelancers\Profile::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Organization.Teams.html#___construct">						<code>Upwork\API\Routers\Organization\Teams::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Workdays.html#___construct">						<code>Upwork\API\Routers\Workdays::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Jobs.Search.html#___construct">						<code>Upwork\API\Routers\Jobs\Search::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Reports.Finance.Earnings.html#___construct">						<code>Upwork\API\Routers\Reports\Finance\Earnings::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Snapshot.html#___construct">						<code>Upwork\API\Routers\Snapshot::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Messages.html#___construct">						<code>Upwork\API\Routers\Messages::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Activities.Team.html#___construct">						<code>Upwork\API\Routers\Activities\Team::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Hr.Engagements.html#___construct">						<code>Upwork\API\Routers\Hr\Engagements::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Activities.Engagement.html#___construct">						<code>Upwork\API\Routers\Activities\Engagement::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Workdiary.html#___construct">						<code>Upwork\API\Routers\Workdiary::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Organization.Companies.html#___construct">						<code>Upwork\API\Routers\Organization\Companies::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Freelancers.Search.html#___construct">						<code>Upwork\API\Routers\Freelancers\Search::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Organization.Users.html#___construct">						<code>Upwork\API\Routers\Organization\Users::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Metadata.html#___construct">						<code>Upwork\API\Routers\Metadata::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Hr.Freelancers.Offers.html#___construct">						<code>Upwork\API\Routers\Hr\Freelancers\Offers::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Hr.Interviews.html#___construct">						<code>Upwork\API\Routers\Hr\Interviews::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Payments.html#___construct">						<code>Upwork\API\Routers\Payments::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Hr.Roles.html#___construct">						<code>Upwork\API\Routers\Hr\Roles::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Reports.Finance.Accounts.html#___construct">						<code>Upwork\API\Routers\Reports\Finance\Accounts::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Hr.Freelancers.Applications.html#___construct">						<code>Upwork\API\Routers\Hr\Freelancers\Applications::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Hr.Clients.Applications.html#___construct">						<code>Upwork\API\Routers\Hr\Clients\Applications::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Hr.Clients.Offers.html#___construct">						<code>Upwork\API\Routers\Hr\Clients\Offers::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Reports.Finance.Billings.html#___construct">						<code>Upwork\API\Routers\Reports\Finance\Billings::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Reports.Time.html#___construct">						<code>Upwork\API\Routers\Reports\Time::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Hr.Submissions.html#___construct">						<code>Upwork\API\Routers\Hr\Submissions::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Hr.Contracts.html#___construct">						<code>Upwork\API\Routers\Hr\Contracts::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Hr.Milestones.html#___construct">						<code>Upwork\API\Routers\Hr\Milestones::__construct()</code></a>				</li>
+				<li>
+<a href="Upwork.API.Routers.Hr.Jobs.html#___construct">						<code>Upwork\API\Routers\Hr\Jobs::__construct()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getServer" id="_getServer">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.Client.html#74-83" title="Go to source code">getServer</a>(): object</code>
+
+
+	<div class="expandable-collapsedView">
+		Get server instance
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get server instance</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getServer">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getToken" id="_getToken">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.Client.html#85-96" title="Go to source code">getToken</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get request token for web-base apps
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get request token for web-base apps</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getToken">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="auth" id="_auth">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.Client.html#98-127" title="Go to source code">auth</a>(): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Auth application
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Auth application</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_auth">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setOrgUidHeader" id="_setOrgUidHeader">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.Client.html#129-138" title="Go to source code">setOrgUidHeader</a>(<span>string <var>$tenantId</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Configure X-Upwork-API-TenantId header
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Configure X-Upwork-API-TenantId header</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$tenantId</var>&nbsp;&nbsp;</td>
+										<td><p>(Optional) Organization UID</p>
+</td>
+									</tr>
+							</table>
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setOrgUidHeader">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_request" id="__request">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.Client.html#140-181" title="Go to source code">_request</a>(<span>string <var>$type</var></span>, <span>string <var>$url</var></span>, <span>array <var>$params</var> = []</span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Run API request
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Run API request</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$type</var>&nbsp;&nbsp;</td>
+										<td><p>Type of request, i.e. method</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$url</var>&nbsp;&nbsp;</td>
+										<td><p>URL</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$params</var>&nbsp;&nbsp;</td>
+										<td><p>(Optional) Additional list of parameters</p>
+</td>
+									</tr>
+							</table>
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#__request">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="get" id="_get">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.Client.html#183-195" title="Go to source code">get</a>(<span>string <var>$url</var></span>, <span>array <var>$params</var> = []</span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Do GET request
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Do GET request</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$url</var>&nbsp;&nbsp;</td>
+										<td><p>API URL</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$params</var>&nbsp;&nbsp;</td>
+										<td><p>(Optional) Additional parameters</p>
+</td>
+									</tr>
+							</table>
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_get">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="post" id="_post">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.Client.html#197-209" title="Go to source code">post</a>(<span>string <var>$url</var></span>, <span>array <var>$params</var> = []</span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Do POST request
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Do POST request</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$url</var>&nbsp;&nbsp;</td>
+										<td><p>API URL</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$params</var>&nbsp;&nbsp;</td>
+										<td><p>(Optional) Additional parameters</p>
+</td>
+									</tr>
+							</table>
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_post">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="put" id="_put">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.Client.html#211-223" title="Go to source code">put</a>(<span>string <var>$url</var></span>, <span>array <var>$params</var> = []</span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Do PUT request
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Do PUT request</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$url</var>&nbsp;&nbsp;</td>
+										<td><p>API URL</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$params</var>&nbsp;&nbsp;</td>
+										<td><p>(Optional) Additional parameters</p>
+</td>
+									</tr>
+							</table>
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_put">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="delete" id="_delete">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.Client.html#225-237" title="Go to source code">delete</a>(<span>string <var>$url</var></span>, <span>array <var>$params</var> = []</span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Do DELETE request
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Do DELETE request</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$url</var>&nbsp;&nbsp;</td>
+										<td><p>API URL</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$params</var>&nbsp;&nbsp;</td>
+										<td><p>(Optional) Additional parameters</p>
+</td>
+									</tr>
+							</table>
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_delete">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+		<table class="table" id="constants">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Constants</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="DATA_FORMAT" id="DATA_FORMAT">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Upwork.API.Client.html#24-26" title="Go to source code">DATA_FORMAT</a> = <span class="php-str">'json'</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#DATA_FORMAT">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="_epoint" id="$_epoint">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><span title="Upwork\API\Entry">Entry</span></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Upwork.API.Client.html#28-31" title="Go to source code">$_epoint</a></var> = UPWORK_API_EP_NAME</code>
+				
+	<div class="expandable-collapsedView">
+		point name
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>point name</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_epoint">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_tenantId" id="$_tenantId">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><span title="Upwork\API\Organization">Organization</span></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Upwork.API.Client.html#33-36" title="Go to source code">$_tenantId</a></var> = <span class="php-kw">null</span></code>
+				
+	<div class="expandable-collapsedView">
+		UID
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>UID</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_tenantId">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_server" id="$_server">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><span title="Upwork\API\Server">Server</span></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Upwork.API.Client.html#38-41" title="Go to source code">$_server</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		instance (AuthTypes)
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>instance (AuthTypes)</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_server">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			PHP bindings for Upwork API (OAuth2) API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha.6</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

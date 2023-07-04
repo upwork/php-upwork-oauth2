@@ -1,0 +1,793 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>Class Upwork\API\AuthTypes\AbstractOAuth | PHP bindings for Upwork API (OAuth2) API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Upwork.html">Upwork</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Upwork.API.html">API</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Upwork.API.AuthTypes.html">AuthTypes</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Upwork.API.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Upwork.API.Routers.html">Routers</a>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li class="active">
+						<a href="Upwork.API.AuthTypes.AbstractOAuth.html">
+							AbstractOAuth
+						</a>
+					</li>
+					<li>
+						<a href="Upwork.API.AuthTypes.OAuth2ClientLib.html">
+							OAuth2ClientLib
+						</a>
+					</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Upwork.API.AuthTypes.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Upwork.API.AuthTypes.AbstractOAuth.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Upwork.html">Upwork</a>\<a href="namespace-Upwork.API.html">API</a>\<a href="namespace-Upwork.API.AuthTypes.html">AuthTypes</a>\<a href="Upwork.API.AuthTypes.AbstractOAuth.html">AbstractOAuth</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+			<tr><th><code>abstract</code></th></tr>
+
+
+
+	</table>
+		<div class="classLikeDescription">
+	<div class="description"><p>Abstract OAuth Client</p>
+</div>
+		</div>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Upwork\API\AuthTypes\AbstractOAuth</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Upwork.API.AuthTypes.OAuth2ClientLib.html"><span>Upwork\API\AuthTypes\OAuth2ClientLib</span></a>
+
+		implements
+			<a href="Upwork.API.Interfaces.Client.html"><span title="Upwork\API\Interfaces\Client">Client</span></a>
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#24" title="Go to source code">Upwork/API/AuthTypes/AbstractOAuth.php</a><br>
+		</div>
+
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#80-108" title="Go to source code">__construct</a>(<span>string <var>$clientId</var></span>, <span>string <var>$clientSecret</var></span>, <span>string <var>$redirectUri</var> = <span class="php-kw">null</span></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Constructor
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Constructor</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$clientId</var>&nbsp;&nbsp;</td>
+										<td><p>Application key (clientId)</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$clientSecret</var>&nbsp;&nbsp;</td>
+										<td><p>Secret key (clientSecret)</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$redirectUri</var>&nbsp;&nbsp;</td>
+										<td><p>Redirect URI</p>
+</td>
+									</tr>
+							</table>
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Upwork.API.ApiException.html"><span>Upwork\API\ApiException</span></a></code>&nbsp;</td>
+										<td><p>Wrong clientId or clientSecret</p>
+</td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="option" id="_option">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#110-130" title="Go to source code">option</a>(<span>string <var>$option</var></span>, <span>mixed <var>$value</var></span>): boolean</code>
+
+
+	<div class="expandable-collapsedView">
+		Set option
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set option</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$option</var>&nbsp;&nbsp;</td>
+										<td><p>Option name</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$value</var>&nbsp;&nbsp;</td>
+										<td><p>Option value</p>
+</td>
+									</tr>
+							</table>
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_option">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="auth" id="_auth">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#132-212" title="Go to source code">auth</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Auth process
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Auth process</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Upwork.API.ApiException.html"><span>Upwork\API\ApiException</span></a></code>&nbsp;</td>
+										<td><p>Wrong refresh token</p>
+</td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_auth">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_setupTokens" id="__setupTokens">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					abstract
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#214-222" title="Go to source code">_setupTokens</a>(<span>string <var>$authzCode</var></span>, <span>string <var>$grantType</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get access token
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get access token</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$authzCode</var>&nbsp;&nbsp;</td>
+										<td><p>Authorization Code, got after authorization</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$grantType</var>&nbsp;&nbsp;</td>
+										<td><p>Grant Type</p>
+</td>
+									</tr>
+							</table>
+
+
+
+		<h4>Implemented by</h4>
+		<ul>
+				<li>
+<a href="Upwork.API.AuthTypes.OAuth2ClientLib.html#__setupTokens">						<code>Upwork\API\AuthTypes\OAuth2ClientLib::_setupTokens()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#__setupTokens">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_getOAuthInstance" id="__getOAuthInstance">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					abstract
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#224-231" title="Go to source code">_getOAuthInstance</a>(<span>integer <var>$authType</var></span>): object</code>
+
+
+	<div class="expandable-collapsedView">
+		Get OAuth instance
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get OAuth instance</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$authType</var>&nbsp;&nbsp;</td>
+										<td><p>Auth type</p>
+</td>
+									</tr>
+							</table>
+
+
+
+		<h4>Implemented by</h4>
+		<ul>
+				<li>
+<a href="Upwork.API.AuthTypes.OAuth2ClientLib.html#__getOAuthInstance">						<code>Upwork\API\AuthTypes\OAuth2ClientLib::_getOAuthInstance()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#__getOAuthInstance">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+		<table class="table" id="constants">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Constants</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="URL_AUTH" id="URL_AUTH">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#27" title="Go to source code">URL_AUTH</a> = <span class="php-str">'/ab/account-security/oauth2/authorize'</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#URL_AUTH">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="URL_ATOKEN" id="URL_ATOKEN">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#28" title="Go to source code">URL_ATOKEN</a> = <span class="php-str">'/v3/oauth2/token'</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#URL_ATOKEN">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="URL_RTOKEN" id="URL_RTOKEN">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#29" title="Go to source code">URL_RTOKEN</a> = <span class="php-str">'/v3/oauth2/token'</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#URL_RTOKEN">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="_clientId" id="$_clientId">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><span title="Upwork\API\AuthTypes\Client">Client</span></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#31-34" title="Go to source code">$_clientId</a></var> = <span class="php-kw">null</span></code>
+				
+	<div class="expandable-collapsedView">
+		ID (a.k.a. Consumer Key)
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>ID (a.k.a. Consumer Key)</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_clientId">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_clientSecret" id="$_clientSecret">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><span title="Upwork\API\AuthTypes\Client">Client</span></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#35-38" title="Go to source code">$_clientSecret</a></var> = <span class="php-kw">null</span></code>
+				
+	<div class="expandable-collapsedView">
+		Secret (a.k.a. Key Secret)
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Secret (a.k.a. Key Secret)</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_clientSecret">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_grantType" id="$_grantType">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><span title="Upwork\API\AuthTypes\Grant">Grant</span></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#39-42" title="Go to source code">$_grantType</a></var> = <span class="php-kw">null</span></code>
+				
+	<div class="expandable-collapsedView">
+		Type
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Type</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_grantType">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_redirectUri" id="$_redirectUri">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><span title="Upwork\API\AuthTypes\Redirect">Redirect</span></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#43-46" title="Go to source code">$_redirectUri</a></var> = <span class="php-kw">null</span></code>
+				
+	<div class="expandable-collapsedView">
+		URI
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>URI</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_redirectUri">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_refreshToken" id="$_refreshToken">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><span title="Upwork\API\AuthTypes\refresh">refresh</span></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#47-50" title="Go to source code">$_refreshToken</a></var> = <span class="php-kw">null</span></code>
+				
+	<div class="expandable-collapsedView">
+		token
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>token</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_refreshToken">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_accessToken" id="$_accessToken">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><span title="Upwork\API\AuthTypes\access">access</span></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#51-54" title="Go to source code">$_accessToken</a></var> = <span class="php-kw">null</span></code>
+				
+	<div class="expandable-collapsedView">
+		token
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>token</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_accessToken">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_expiresIn" id="$_expiresIn">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><span title="Upwork\API\AuthTypes\expires_in">expires_in</span></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#55-58" title="Go to source code">$_expiresIn</a></var> = <span class="php-kw">null</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_expiresIn">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_authzCode" id="$_authzCode">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><span title="Upwork\API\AuthTypes\Authorization">Authorization</span></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#59-62" title="Go to source code">$_authzCode</a></var> = <span class="php-kw">null</span></code>
+				
+	<div class="expandable-collapsedView">
+		Code
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Code</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_authzCode">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_state" id="$_state">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><span title="Upwork\API\AuthTypes\state">state</span></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#63-66" title="Go to source code">$_state</a></var> = <span class="php-kw">null</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_state">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_epoint" id="$_epoint">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><span title="Upwork\API\AuthTypes\Entry">Entry</span></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#67-70" title="Go to source code">$_epoint</a></var> = <span class="php-str">'api'</span></code>
+				
+	<div class="expandable-collapsedView">
+		point name
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>point name</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_epoint">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_mode" id="$_mode">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><span title="Upwork\API\AuthTypes\Application">Application</span></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#71-74" title="Go to source code">$_mode</a></var> = <span class="php-str">'web'</span></code>
+				
+	<div class="expandable-collapsedView">
+		mode
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>mode</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_mode">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_verifySsl" id="$_verifySsl">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><span title="Upwork\API\AuthTypes\SSL">SSL</span></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Upwork.API.AuthTypes.AbstractOAuth.html#75-78" title="Go to source code">$_verifySsl</a></var> = <span class="php-kw">true</span></code>
+				
+	<div class="expandable-collapsedView">
+		verification flag
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>verification flag</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_verifySsl">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			PHP bindings for Upwork API (OAuth2) API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha.6</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

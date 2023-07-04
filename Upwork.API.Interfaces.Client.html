@@ -1,0 +1,226 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>Interface Upwork\API\Interfaces\Client | PHP bindings for Upwork API (OAuth2) API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Upwork.html">Upwork</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Upwork.API.html">API</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Upwork.API.AuthTypes.html">AuthTypes</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Upwork.API.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Upwork.API.Routers.html">Routers</a>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Interfaces</h3>
+			<ul>
+					<li class="active">
+						<a href="Upwork.API.Interfaces.Client.html">
+							Client
+						</a>
+					</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Upwork.API.Interfaces.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Upwork.API.Interfaces.Client.html">Interface</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Interface <a href="namespace-Upwork.html">Upwork</a>\<a href="namespace-Upwork.API.html">API</a>\<a href="namespace-Upwork.API.Interfaces.html">Interfaces</a>\<a href="Upwork.API.Interfaces.Client.html">Client</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+	</table>
+		<div class="classLikeDescription">
+	<div class="description"><p>Client Interface for AuthTypes</p>
+</div>
+		</div>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Upwork\API\Interfaces\Client</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Upwork.API.AuthTypes.OAuth2ClientLib.html"><span>Upwork\API\AuthTypes\OAuth2ClientLib</span></a>
+
+		implements
+			<b><span class="active" title="Upwork\API\Interfaces\Client">Client</span></b>
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Upwork.API.Interfaces.Client.html#18" title="Go to source code">Upwork/API/Interfaces/Client.php</a><br>
+		</div>
+
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="auth" id="_auth">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.Interfaces.Client.html#20-25" title="Go to source code">auth</a>()</code>
+
+
+	<div class="expandable-collapsedView">
+		Authentication
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Authentication</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_auth">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="request" id="_request">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Upwork.API.Interfaces.Client.html#27-35" title="Go to source code">request</a>(<span>string <var>$type</var></span>, <span>string <var>$url</var></span>, <span>array <var>$params</var> = []</span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Request to API server
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Request to API server</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$type</var>&nbsp;&nbsp;</td>
+										<td><p>Type of request, i.e. http method</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$url</var>&nbsp;&nbsp;</td>
+										<td><p>URL</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$params</var>&nbsp;&nbsp;</td>
+										<td><p>(Optional) List of additional parameters</p>
+</td>
+									</tr>
+							</table>
+
+
+
+		<h4>Implemented by</h4>
+		<ul>
+				<li>
+<a href="Upwork.API.AuthTypes.OAuth2ClientLib.html#_request">						<code>Upwork\API\AuthTypes\OAuth2ClientLib::request()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_request">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			PHP bindings for Upwork API (OAuth2) API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha.6</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>
