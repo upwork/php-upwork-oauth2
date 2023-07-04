@@ -1,5 +1,8 @@
 # Release History
 
+## 2.4.0
+* Add support of Client Credentials Grant
+
 ## 2.3.1
 * Bug fixes
 

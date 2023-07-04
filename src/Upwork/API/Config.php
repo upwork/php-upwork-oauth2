@@ -28,6 +28,10 @@ final class Config
      */
     static private $_clientSecret;
     /**
+     * @var Grant Type
+     */
+    static private $_grantType = 'authorization_code';
+    /**
      * @var Received access token
      */
     static private $_accessToken;

@@ -22,9 +22,10 @@ $config = new \Upwork\API\Config(
     array(
         'clientId'          => 'xxxxxxxxxxxxxxxxxxxxxxxxxxx', // SETUP YOUR CONSUMER KEY
         'clientSecret'      => 'xxxxxxxxxxxx', // SETUP KEY SECRET
-	'redirectUri'       => 'https://a.callback.url/',
+        //'grantType'         => 'client_credentials', // used in Client Credentials Grant
+	      'redirectUri'       => 'https://a.callback.url/', // used in Code Authorization Grant
         'accessToken'       => 'xxxxxxxxxxxxxxxxxxxxxxxxxxx', // WARNING: keep this up-to-date!
-        'refreshToken'      => 'xxxxxxxxxxxxxxxxxxxxxxxxxxx', // WARNING: keep this up-to-date!
+        'refreshToken'      => 'xxxxxxxxxxxxxxxxxxxxxxxxxxx', // WARNING: keep this up-to-date! // NOT needed for Client Credentials Grant
         'expiresIn'         => 'xxxxxxxxxx', // WARNING: keep this up-to-date!
         //'debug'             => true, // enables debug mode
         //'authType'          => 'MyOAuthPHPLib' // your own authentication type, see AuthTypes directory
