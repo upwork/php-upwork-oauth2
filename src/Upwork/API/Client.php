@@ -51,8 +51,9 @@ class Client
         ApiDebug::p('preparing Client');
 
         $clientId     = $config::get('clientId');
-	$clientSecret = $config::get('clientSecret');
-	$redirectUri  = $config::get('redirectUri');
+	    $clientSecret = $config::get('clientSecret');
+        $grantType    = $config::get('grantType');
+	    $redirectUri  = $config::get('redirectUri');
         $aToken       = $config::get('accessToken');
         $rToken       = $config::get('refreshToken');
         $expiresIn    = $config::get('expiresIn');
@@ -60,9 +61,13 @@ class Client
         $auth         = 'Upwork\API\AuthTypes\\' . $config::get('authType');
 
         $this->_server = new $auth($clientId, $clientSecret, $redirectUri);
-        !$aToken    || $this->_server->option('accessToken', $aToken);
-        !$rToken    || $this->_server->option('refreshToken', $rToken);
+        !$expiresIn || $this->_server->option('grantType', $grantType);
         !$expiresIn || $this->_server->option('expiresIn', $expiresIn);
+        !$aToken    || $this->_server->option('accessToken', $aToken);
+        if (ApiConfig::get('grantType') == 'authorization_code') {
+            !$rToken    || $this->_server->option('refreshToken', $rToken);
+        }
+
         $this->_server->option('verifySsl', $verifySsl);
     }
 
@@ -106,12 +111,16 @@ class Client
         // they must be already obrained on the first step
         if (ApiConfig::get('mode') === 'web') {
             $aToken   = ApiConfig::get('accessToken');
-            $rToken   = ApiConfig::get('refreshToken');
-            $authzCode = ApiConfig::get('authzCode');
+            if (ApiConfig::get('grantType') != 'client_credentials') {
+                $rToken   = ApiConfig::get('refreshToken');
+                $authzCode = ApiConfig::get('authzCode');
+            }
 
             !$aToken   || $this->_server->option('accessToken', $aToken);
-            !$rToken   || $this->_server->option('refreshToken', $rToken);
-            !$authzCode || $this->_server->option('authzCode', $authzCode);
+            if (ApiConfig::get('grantType') == 'authorization_code') {
+                !$rToken   || $this->_server->option('refreshToken', $rToken);
+                !$authzCode || $this->_server->option('authzCode', $authzCode);
+            }
         }
 
         return $this->_server->auth();

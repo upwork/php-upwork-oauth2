@@ -41,9 +41,9 @@ final class OAuth2ClientLib extends AbstractOAuth implements ApiClient
      */
     public function getInstance()
     {
-	return (self::$_provider instanceof \League\OAuth2\Client\Provider\GenericProvider)
-            ? self::$_provider
-	    : $this->_getOAuthInstance();
+        return (self::$_provider instanceof \League\OAuth2\Client\Provider\GenericProvider)
+                ? self::$_provider
+            : $this->_getOAuthInstance();
     }
 
     /**
@@ -59,46 +59,46 @@ final class OAuth2ClientLib extends AbstractOAuth implements ApiClient
      */
     public function request($type, $url, $params = array(), string $tenantId = null)
     {
-	ApiDebug::p('running request from ' . __CLASS__);
+        ApiDebug::p('running request from ' . __CLASS__);
 
-	switch ($type) {
-	    case \League\OAuth2\Client\Provider\AbstractProvider::METHOD_POST:
-                if (self::$_epoint == UPWORK_GRAPHQL_EP_NAME) {
-	            $options = array('headers' => array('content-type' => 'application/json'));
-                    is_null($tenantId) || $options['headers']['X-Upwork-API-TenantId'] = $tenantId;
-		    $options['body'] = $params;
-                } else {
-	            $options = array('headers' => array('content-type' => 'application/x-www-form-urlencoded'));
-		    $options['body'] = http_build_query($params, null, '&', \PHP_QUERY_RFC3986);
-                }
+        switch ($type) {
+            case \League\OAuth2\Client\Provider\AbstractProvider::METHOD_POST:
+                    if (self::$_epoint == UPWORK_GRAPHQL_EP_NAME) {
+                    $options = array('headers' => array('content-type' => 'application/json'));
+                        is_null($tenantId) || $options['headers']['X-Upwork-API-TenantId'] = $tenantId;
+                $options['body'] = $params;
+                    } else {
+                    $options = array('headers' => array('content-type' => 'application/x-www-form-urlencoded'));
+                $options['body'] = http_build_query($params, null, '&', \PHP_QUERY_RFC3986);
+                    }
 
-		$url = ApiUtils::getFullUrl($url, self::$_epoint);
-		break;
-	    case \League\OAuth2\Client\Provider\AbstractProvider::METHOD_GET:
-		$options = array();
-	        $url = ApiUtils::getFullUrl($url, self::$_epoint, (($type == 'GET' ? $params : null)));
-		break;
-	    default:
-		throw new ApiException('Unsupported HTTP method.');
-	}
+            $url = ApiUtils::getFullUrl($url, self::$_epoint);
+            break;
+            case \League\OAuth2\Client\Provider\AbstractProvider::METHOD_GET:
+            $options = array();
+                $url = ApiUtils::getFullUrl($url, self::$_epoint, (($type == 'GET' ? $params : null)));
+            break;
+            default:
+            throw new ApiException('Unsupported HTTP method.');
+        }
 
-	$options['headers']['user-agent'] = ApiConfig::UPWORK_LIBRARY_USER_AGENT;
-	$request = $this->getInstance()->getAuthenticatedRequest($type, $url, self::$_accessToken, $options);
-	
-	ApiDebug::p('prepared request', $request);
+        $options['headers']['user-agent'] = ApiConfig::UPWORK_LIBRARY_USER_AGENT;
+        $request = $this->getInstance()->getAuthenticatedRequest($type, $url, self::$_accessToken, $options);
 
-	try {
-	    // do not use getParsedResponse, it returns an array
-	    // but we need a raw json that will be decoded and returned as StdClass object
-	    $response = $this->getInstance()->getResponse($request);
+        ApiDebug::p('prepared request', $request);
+
+        try {
+            // do not use getParsedResponse, it returns an array
+            // but we need a raw json that will be decoded and returned as StdClass object
+            $response = $this->getInstance()->getResponse($request);
         } catch (\GuzzleHttp\Exception\ClientException $e) {
             $eResponse = $e->getResponse();
             $response = $eResponse->getBody()->getContents();
-	} catch (\Exception $e) {
-	    $response = $e->getResponseBody();
-	}
-        
-	ApiDebug::p('got response from server', $response);
+        } catch (\Exception $e) {
+            $response = $e->getResponseBody();
+        }
+
+        ApiDebug::p('got response from server', $response);
 
         return (string) $response->getBody();
     }
@@ -107,14 +107,15 @@ final class OAuth2ClientLib extends AbstractOAuth implements ApiClient
      * Get access token
      *
      * @param	string $authzCode	Authorization code (a received verifier)
+     * @param	string $grantType   Grant Type
      * @access	protected
      * @return	array
      */
-    protected function _setupTokens($authzCode)
+    protected function _setupTokens($authzCode, $grantType)
     {
         ApiDebug::p('requesting access token');
 
-	return $this->_requestTokens('authorization_code', array('code' => $authzCode));
+	    return $this->_requestTokens($grantType, array('code' => $authzCode));
     }
 
     /**
@@ -126,9 +127,9 @@ final class OAuth2ClientLib extends AbstractOAuth implements ApiClient
      */
     protected function _refreshTokens($refreshToken)
     {
-	ApiDebug::p('refreshing the existing access token');
+        ApiDebug::p('refreshing the existing access token');
 
-	return $this->_requestTokens('refresh_token', array('refresh_token' => $refreshToken));
+        return $this->_requestTokens('refresh_token', array('refresh_token' => $refreshToken));
     }
 
     /**
@@ -147,11 +148,11 @@ final class OAuth2ClientLib extends AbstractOAuth implements ApiClient
             'clientSecret' => self::$_clientSecret,
             'redirectUri' => self::$_redirectUri,
             'urlAuthorize' => ApiUtils::getFullUrl(self::URL_AUTH, ''),
-	    'urlAccessToken' => ApiUtils::getFullUrl(self::URL_ATOKEN, 'api'),
-	    'urlResourceOwnerDetails' => ''
+            'urlAccessToken' => ApiUtils::getFullUrl(self::URL_ATOKEN, 'api'),
+            'urlResourceOwnerDetails' => ''
         );
         
-	self::$_provider = new \League\OAuth2\Client\Provider\GenericProvider($options);
+	    self::$_provider = new \League\OAuth2\Client\Provider\GenericProvider($options);
 
         return self::$_provider;
     }
@@ -170,21 +171,24 @@ final class OAuth2ClientLib extends AbstractOAuth implements ApiClient
 
         $accessTokenInfo = array();
 
-	$accessToken = $this->getInstance()->getHttpClient()->getConfig()['handler']->push(
+	    $accessToken = $this->getInstance()->getHttpClient()->getConfig()['handler']->push(
             Middleware::mapRequest(function (RequestInterface $request) {
                 return $request->withHeader('User-Agent', ApiConfig::UPWORK_LIBRARY_USER_AGENT);
             }));
         $accessToken = $this->getInstance()->getAccessToken($type, $options);
 
         $accessTokenInfo['access_token']  = $accessToken->getToken();
-	$accessTokenInfo['refresh_token'] = $accessToken->getRefreshToken();
-	$accessTokenInfo['expires_in']    = $accessToken->getExpires();
-
-        ApiDebug::p('got access token info', $accessTokenInfo);
+        $accessTokenInfo['expires_in']    = $accessToken->getExpires();
 
         self::$_accessToken  = $accessTokenInfo['access_token'];
-	self::$_refreshToken = $accessTokenInfo['refresh_token'];
-	self::$_expiresIn    = $accessTokenInfo['expires_in'];
+        self::$_expiresIn    = $accessTokenInfo['expires_in'];
+
+        if ($type === 'authorization_code') {
+            $accessTokenInfo['refresh_token'] = $accessToken->getRefreshToken();
+            self::$_refreshToken = $accessTokenInfo['refresh_token'];
+        }
+
+        ApiDebug::p('got access token info', $accessTokenInfo);
 
         return $accessTokenInfo;
     }
