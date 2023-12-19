@@ -61,7 +61,7 @@ class Client
         $auth         = 'Upwork\API\AuthTypes\\' . $config::get('authType');
 
         $this->_server = new $auth($clientId, $clientSecret, $redirectUri);
-        !$expiresIn || $this->_server->option('grantType', $grantType);
+        !$grantType || $this->_server->option('grantType', $grantType);
         !$expiresIn || $this->_server->option('expiresIn', $expiresIn);
         !$aToken    || $this->_server->option('accessToken', $aToken);
         if (ApiConfig::get('grantType') == 'authorization_code') {
