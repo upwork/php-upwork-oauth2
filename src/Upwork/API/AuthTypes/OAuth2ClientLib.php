@@ -92,8 +92,7 @@ final class OAuth2ClientLib extends AbstractOAuth implements ApiClient
             // but we need a raw json that will be decoded and returned as StdClass object
             $response = $this->getInstance()->getResponse($request);
         } catch (\GuzzleHttp\Exception\ClientException $e) {
-            $eResponse = $e->getResponse();
-            $response = $eResponse->getBody()->getContents();
+            $response = $e->getResponse();
         } catch (\Exception $e) {
             $response = $e->getResponseBody();
         }
