@@ -1,5 +1,8 @@
 # Release History
 
+## 2.4.2
+* Bug fixes
+
 ## 2.4.1
 * Bug fixes
 
