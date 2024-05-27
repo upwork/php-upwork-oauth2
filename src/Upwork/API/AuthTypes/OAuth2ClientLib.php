@@ -182,7 +182,7 @@ final class OAuth2ClientLib extends AbstractOAuth implements ApiClient
         self::$_accessToken  = $accessTokenInfo['access_token'];
         self::$_expiresIn    = $accessTokenInfo['expires_in'];
 
-        if ($type === 'authorization_code') {
+        if ($type === 'authorization_code' || $type === 'refresh_token') {
             $accessTokenInfo['refresh_token'] = $accessToken->getRefreshToken();
             self::$_refreshToken = $accessTokenInfo['refresh_token'];
         }
