@@ -1,5 +1,8 @@
 # Release History
 
+## 2.4.3
+* Fix - Update refresh_token when doing Refresh Token Grant flow
+
 ## 2.4.2
 * Bug fixes
 
