@@ -15,6 +15,7 @@ namespace Upwork\API\Routers;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * Metadata
@@ -50,11 +51,7 @@ final class Metadata extends ApiClient
     public function getCategoriesV2()
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/profiles/v2/metadata/categories');
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -65,11 +62,7 @@ final class Metadata extends ApiClient
     public function getSkills()
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/profiles/v1/metadata/skills');
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -80,11 +73,7 @@ final class Metadata extends ApiClient
     public function getSkillsV2()
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/profiles/v2/metadata/skills');
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -95,11 +84,7 @@ final class Metadata extends ApiClient
     public function getSpecialties()
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/profiles/v1/metadata/specialties');
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -110,11 +95,7 @@ final class Metadata extends ApiClient
     public function getRegions()
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/profiles/v1/metadata/regions');
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -125,11 +106,7 @@ final class Metadata extends ApiClient
     public function getTests()
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/profiles/v1/metadata/tests');
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -141,10 +118,6 @@ final class Metadata extends ApiClient
     public function getReasons($params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/profiles/v1/metadata/reasons', $params);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }

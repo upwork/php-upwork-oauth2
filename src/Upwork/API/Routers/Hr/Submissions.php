@@ -15,6 +15,7 @@ namespace Upwork\API\Routers\Hr;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * Submissions
@@ -51,11 +52,7 @@ final class Submissions extends ApiClient
     public function requestApproval($params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->post('/hr/v3/fp/submissions', $params);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -68,11 +65,7 @@ final class Submissions extends ApiClient
     public function approve($submissionId, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->put('/hr/v3/fp/submissions/' . $submissionId . '/approve', $params);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -85,10 +78,6 @@ final class Submissions extends ApiClient
     public function reject($submissionId, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->put('/hr/v3/fp/submissions/' . $submissionId . '/reject', $params);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }

@@ -15,6 +15,7 @@ namespace Upwork\API\Routers;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * Snapshot info
@@ -52,11 +53,7 @@ final class Snapshot extends ApiClient
     public function getByContract($contractId, $ts)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/team/v3/snapshots/contracts/' . $contractId . '/' . $ts);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -70,11 +67,7 @@ final class Snapshot extends ApiClient
     public function updateByContract($contractId, $ts, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->put('/team/v3/snapshots/contracts/' . $contractId . '/' . $ts, $params);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -87,10 +80,6 @@ final class Snapshot extends ApiClient
     public function deleteByContract($contractId, $ts)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->delete('/team/v3/snapshots/contracts/' . $contractId . '/' . $ts);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }

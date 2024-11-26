@@ -15,6 +15,7 @@ namespace Upwork\API\Routers\Organization;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * Get companies
@@ -50,11 +51,7 @@ final class Companies extends ApiClient
     public function getList()
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/hr/v2/companies');
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -66,11 +63,7 @@ final class Companies extends ApiClient
     public function getSpecific($cmpReference)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/hr/v2/companies/' . $cmpReference);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -82,11 +75,7 @@ final class Companies extends ApiClient
     public function getTeams($cmpReference)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/hr/v2/companies/' . $cmpReference . '/teams');
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -98,10 +87,6 @@ final class Companies extends ApiClient
     public function getUsers($cmpReference)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/hr/v2/companies/' . $cmpReference . '/users');
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }

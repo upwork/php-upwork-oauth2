@@ -15,6 +15,7 @@ namespace Upwork\API\Routers\Jobs;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * Job Profile
@@ -51,10 +52,6 @@ final class Profile extends ApiClient
     public function getSpecific($key)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/profiles/v1/jobs/' . $key);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }

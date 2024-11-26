@@ -15,6 +15,7 @@ namespace Upwork\API\Routers;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * Custom Payments
@@ -52,10 +53,6 @@ final class Payments extends ApiClient
     public function submitBonus($teamReference, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $adjustments = $this->_client->post('/hr/v2/teams/' . $teamReference . '/adjustments', $params);
-        ApiDebug::p('found adjustments info', $adjustments);
-
-        return $adjustments;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }

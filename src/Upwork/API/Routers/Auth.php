@@ -15,6 +15,7 @@ namespace Upwork\API\Routers;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * My Info
@@ -50,10 +51,6 @@ final class Auth extends ApiClient
     public function getUserInfo()
     {
         ApiDebug::p(__FUNCTION__);
-
-        $info = $this->_client->get('/auth/v1/info');
-        ApiDebug::p('found auth info', $info);
-
-        return $info;
+	    throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }

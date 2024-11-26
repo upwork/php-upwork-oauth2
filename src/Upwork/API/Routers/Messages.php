@@ -14,6 +14,7 @@ namespace Upwork\API\Routers;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * Messages
@@ -51,11 +52,7 @@ final class Messages extends ApiClient
     public function getRooms($company, $params = array())
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/messages/v3/' . $company . '/rooms', $params);
-        ApiDebug::p('received data', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -70,11 +67,7 @@ final class Messages extends ApiClient
     public function getRoomDetails($company, $roomId, $params = array())
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/messages/v3/' . $company . '/rooms/' . $roomId, $params);
-        ApiDebug::p('received data', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -89,11 +82,7 @@ final class Messages extends ApiClient
     public function getRoomMessages($company, $roomId, $params = array())
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/messages/v3/' . $company . '/rooms/' . $roomId . '/stories', $params);
-        ApiDebug::p('received data', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -108,11 +97,7 @@ final class Messages extends ApiClient
     public function getRoomByOffer($company, $offerId, $params = array())
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/messages/v3/' . $company . '/rooms/offers/' . $offerId, $params);
-        ApiDebug::p('received data', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -127,11 +112,7 @@ final class Messages extends ApiClient
     public function getRoomByApplication($company, $applicationId, $params = array())
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/messages/v3/' . $company . '/rooms/applications/' . $applicationId, $params);
-        ApiDebug::p('received data', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -146,11 +127,7 @@ final class Messages extends ApiClient
     public function getRoomByContract($company, $contractId, $params = array())
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/messages/v3/' . $company . '/rooms/contracts/' . $contractId, $params);
-        ApiDebug::p('received data', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -164,11 +141,7 @@ final class Messages extends ApiClient
     public function createRoom($company, $params = array())
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->post('/messages/v3/' . $company . '/rooms', $params);
-        ApiDebug::p('received data', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -183,11 +156,7 @@ final class Messages extends ApiClient
     public function sendMessageToRoom($company, $roomId, $params = array())
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->post('/messages/v3/' . $company . '/rooms/' . $roomId . '/stories', $params);
-        ApiDebug::p('received data', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -201,11 +170,7 @@ final class Messages extends ApiClient
     public function sendMessageToRooms($company, $params = array())
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->post('/messages/v3/' . $company . '/stories/batch', $params);
-        ApiDebug::p('received data', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -221,11 +186,7 @@ final class Messages extends ApiClient
     public function updateRoomSettings($company, $roomId, $username, $params = array())
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->put('/messages/v3/' . $company . '/rooms/' . $roomId . '/users/' . $username, $params);
-        ApiDebug::p('received data', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -240,10 +201,6 @@ final class Messages extends ApiClient
     public function updateRoomMetadata($company, $roomId, $params = array())
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->put('/messages/v3/' . $company . '/rooms/' . $roomId, $params);
-        ApiDebug::p('received data', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }

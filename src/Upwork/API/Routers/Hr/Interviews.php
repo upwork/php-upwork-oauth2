@@ -15,6 +15,7 @@ namespace Upwork\API\Routers\Hr;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * Invite to Interview
@@ -52,10 +53,6 @@ final class Interviews extends ApiClient
     public function invite($jobKey, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->post('/hr/v1/jobs/' . $jobKey . '/candidates', $params);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }

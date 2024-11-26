@@ -15,6 +15,7 @@ namespace Upwork\API\Routers\Hr;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * Milestones
@@ -51,11 +52,7 @@ final class Milestones extends ApiClient
     public function getActiveMilestone($contractId)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/hr/v3/fp/milestones/statuses/active/contracts/' . $contractId);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -67,11 +64,7 @@ final class Milestones extends ApiClient
     public function getSubmissions($milestoneId)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/hr/v3/fp/milestones/' . $milestoneId . '/submissions');
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -83,11 +76,7 @@ final class Milestones extends ApiClient
     public function create($params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->post('/hr/v3/fp/milestones', $params);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -100,11 +89,7 @@ final class Milestones extends ApiClient
     public function edit($milestoneId, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->put('/hr/v3/fp/milestones/' . $milestoneId, $params);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -117,11 +102,7 @@ final class Milestones extends ApiClient
     public function activate($milestoneId, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->put('/hr/v3/fp/milestones/' . $milestoneId . '/activate', $params);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -134,11 +115,7 @@ final class Milestones extends ApiClient
     public function approve($milestoneId, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->put('/hr/v3/fp/milestones/' . $milestoneId . '/approve', $params);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -150,10 +127,6 @@ final class Milestones extends ApiClient
     public function deleteMilestone($milestoneId)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->delete('/hr/v3/fp/milestones/' . $milestoneId);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }
