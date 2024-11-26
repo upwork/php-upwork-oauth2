@@ -15,6 +15,7 @@ namespace Upwork\API\Routers\Reports;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * Financial Reporting
@@ -55,21 +56,7 @@ final class Time extends ApiClient
     private function _getByType($company, $team = null, $agency = null, $params = array(), $hideFinDetails = false)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $_url = '';
-        if ($team) {
-            $_url = '/teams/' . $team;
-            if ($hideFinDetails) {
-                $_url .= '/hours';
-            }
-        } elseif ($agency) {
-            $_url = '/agencies/' . $agency;
-        }
-
-        $report = $this->_client->get('/timereports/v1/companies/' . $company . $_url, $params);
-        ApiDebug::p('found report info', $report);
-
-        return $report;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -141,11 +128,7 @@ final class Time extends ApiClient
     public function getByFreelancerLimited($freelancerId, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $report = $this->_client->get('/timereports/v1/providers/' . $freelancerId . '/hours', $params);
-        ApiDebug::p('found report info', $report);
-
-        return $report;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -158,10 +141,6 @@ final class Time extends ApiClient
     public function getByFreelancerFull($freelancerId, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $report = $this->_client->get('/timereports/v1/providers/' . $freelancerId, $params);
-        ApiDebug::p('found report info', $report);
-
-        return $report;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }

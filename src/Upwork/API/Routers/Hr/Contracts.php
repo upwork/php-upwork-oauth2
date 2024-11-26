@@ -15,6 +15,7 @@ namespace Upwork\API\Routers\Hr;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * Contracts API
@@ -52,11 +53,7 @@ final class Contracts extends ApiClient
     public function suspendContract($reference, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->put('/hr/v2/contracts/' . $reference . '/suspend', $params);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -69,11 +66,7 @@ final class Contracts extends ApiClient
     public function restartContract($reference, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->put('/hr/v2/contracts/' . $reference . '/restart', $params);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -86,10 +79,6 @@ final class Contracts extends ApiClient
     public function endContract($reference, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->delete('/hr/v2/contracts/' . $reference, $params);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }

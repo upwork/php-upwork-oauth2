@@ -15,6 +15,7 @@ namespace Upwork\API\Routers;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * Workdays API
@@ -54,11 +55,7 @@ final class Workdays extends ApiClient
     public function getByCompany($company, $fromDate, $tillDate, $params = array())
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/team/v3/workdays/companies/' . $company . '/' . $fromDate . ',' . $tillDate, $params);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -73,10 +70,6 @@ final class Workdays extends ApiClient
     public function getByContract($contract, $fromDate, $tillDate, $params = array())
     {
         ApiDebug::p(__FUNCTION__);
-
-        $response = $this->_client->get('/team/v3/workdays/contracts/' . $contract . '/' . $fromDate . ',' . $tillDate, $params);
-        ApiDebug::p('found response info', $response);
-
-        return $response;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }

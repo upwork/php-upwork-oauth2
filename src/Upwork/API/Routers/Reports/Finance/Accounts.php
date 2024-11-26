@@ -15,6 +15,7 @@ namespace Upwork\API\Routers\Reports\Finance;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * Financial Reporting
@@ -52,11 +53,7 @@ final class Accounts extends ApiClient
     public function getOwned($freelancerReference, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $report = $this->_client->get('/finreports/v2/financial_account_owner/' . $freelancerReference, $params);
-        ApiDebug::p('found report info', $report);
-
-        return $report;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -69,10 +66,6 @@ final class Accounts extends ApiClient
     public function getSpecific($entityReference, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $report = $this->_client->get('/finreports/v2/financial_accounts/' . $entityReference, $params);
-        ApiDebug::p('found auth info', $report);
-
-        return $report;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }

@@ -15,6 +15,7 @@ namespace Upwork\API\Routers\Hr;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * User Roles
@@ -50,11 +51,7 @@ final class Roles extends ApiClient
     public function getAll()
     {
         ApiDebug::p(__FUNCTION__);
-
-        $roles = $this->_client->get('/hr/v2/userroles');
-        ApiDebug::p('found response info', $roles);
-
-        return $roles;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -66,10 +63,6 @@ final class Roles extends ApiClient
     public function getBySpecificUser($reference)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $roles = $this->_client->get('/hr/v2/userroles/' . $reference);
-        ApiDebug::p('found auth info', $roles);
-
-        return $roles;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }

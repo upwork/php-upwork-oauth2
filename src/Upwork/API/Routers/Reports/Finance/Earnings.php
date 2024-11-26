@@ -15,6 +15,7 @@ namespace Upwork\API\Routers\Reports\Finance;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * Financial Reporting
@@ -52,11 +53,7 @@ final class Earnings extends ApiClient
     public function getByFreelancer($freelancerReference, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $report = $this->_client->get('/finreports/v2/providers/' . $freelancerReference . '/earnings', $params);
-        ApiDebug::p('found report info', $report);
-
-        return $report;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -69,11 +66,7 @@ final class Earnings extends ApiClient
     public function getByFreelancersTeam($freelancerTeamReference, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $report = $this->_client->get('/finreports/v2/provider_teams/' . $freelancerTeamReference . '/earnings', $params);
-        ApiDebug::p('found report info', $report);
-
-        return $report;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -86,11 +79,7 @@ final class Earnings extends ApiClient
     public function getByFreelancersCompany($freelancerCompanyReference, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $report = $this->_client->get('/finreports/v2/provider_companies/' . $freelancerCompanyReference . '/earnings', $params);
-        ApiDebug::p('found report info', $report);
-
-        return $report;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -103,11 +92,7 @@ final class Earnings extends ApiClient
     public function getByBuyersTeam($buyerTeamReference, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $report = $this->_client->get('/finreports/v2/buyer_teams/' . $buyerTeamReference . '/earnings', $params);
-        ApiDebug::p('found report info', $report);
-
-        return $report;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -120,10 +105,6 @@ final class Earnings extends ApiClient
     public function getByBuyersCompany($buyerCompanyReference, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $report = $this->_client->get('/finreports/v2/buyer_companies/' . $buyerCompanyReference . '/earnings', $params);
-        ApiDebug::p('found report info', $report);
-
-        return $report;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }

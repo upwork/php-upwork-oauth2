@@ -15,6 +15,7 @@ namespace Upwork\API\Routers\Hr;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * Jobs API
@@ -51,11 +52,7 @@ final class Jobs extends ApiClient
     public function getList($params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $jobs = $this->_client->get('/hr/v2/jobs', $params);
-        ApiDebug::p('found response info', $jobs);
-
-        return $jobs;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -67,11 +64,7 @@ final class Jobs extends ApiClient
     public function getSpecific($key)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $job = $this->_client->get('/hr/v2/jobs/' . $key);
-        ApiDebug::p('found response info', $job);
-
-        return $job;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -83,11 +76,7 @@ final class Jobs extends ApiClient
     public function postJob($params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $job = $this->_client->post('/hr/v2/jobs', $params);
-        ApiDebug::p('found response info', $job);
-
-        return $job;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -100,11 +89,7 @@ final class Jobs extends ApiClient
     public function editJob($key, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $job = $this->_client->put('/hr/v2/jobs/' . $key, $params);
-        ApiDebug::p('found response info', $job);
-
-        return $job;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -117,10 +102,6 @@ final class Jobs extends ApiClient
     public function deleteJob($key, $params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $job = $this->_client->delete('/hr/v2/jobs/' . $key, $params);
-        ApiDebug::p('found response info', $job);
-
-        return $job;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }

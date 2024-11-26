@@ -1,5 +1,8 @@
 # Release History
 
+## 2.5.0
+* Remove calls to the legacy APIs
+
 ## 2.4.3
 * Fix - Update refresh_token when doing Refresh Token Grant flow
 

@@ -15,6 +15,7 @@ namespace Upwork\API\Routers\Hr;
 
 use Upwork\API\Debug as ApiDebug;
 use Upwork\API\Client as ApiClient;
+use Upwork\API\ApiException as ApiException;
 
 /**
  * Engagements API
@@ -51,11 +52,7 @@ final class Engagements extends ApiClient
     public function getList($params)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $engagements = $this->_client->get('/hr/v2/engagements', $params);
-        ApiDebug::p('found response info', $engagements);
-
-        return $engagements;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 
     /**
@@ -67,10 +64,6 @@ final class Engagements extends ApiClient
     public function getSpecific($reference)
     {
         ApiDebug::p(__FUNCTION__);
-
-        $engagement = $this->_client->get('/hr/v2/engagements/' . $reference);
-        ApiDebug::p('found response info', $engagement);
-
-        return $engagement;
+        throw new ApiException('The legacy API was deprecated. Please, use GraphQL call - see example in this library.');
     }
 }
