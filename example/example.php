@@ -53,11 +53,7 @@ $accessTokenInfo = $client->auth();
 // and prevent a CSRF attack
 // "if ($client->getServer()->getInstance()->getState() != 'my-saved-state') { ... }"
 
-$auth = new \Upwork\API\Routers\Auth($client);
-$info = $auth->getUserInfo();
-print_r($info);
-
-/*$graphql = new \Upwork\API\Routers\Graphql($client);
+$graphql = new \Upwork\API\Routers\Graphql($client);
 $params['query'] = <<<QUERY
 query {
   user {
@@ -71,4 +67,4 @@ query {
 }
 QUERY;
 $data = $graphql->execute($params);
-print_r($data);*/
+print_r($data);
