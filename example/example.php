@@ -41,8 +41,8 @@ $client = new \Upwork\API\Client($config);
 // gets info of authenticated user
 $accessTokenInfo = $client->auth();
 
-// WARNING: auth() will refresh the token for you but you need to check if the token was refreshed
-// and replace the old token with a new one in your security data storage.
+// WARNING: auth() will refresh the tokens for you but you need to check if the token was refreshed
+// and replace the old access/refresh token pair with a new one in your security data storage.
 
 // if needed, it is possible to access library instance
 // using $client->getServer()->getInstance()->...;
